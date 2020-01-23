@@ -2,7 +2,7 @@
 const initialState = {
   isLoading: false,
   monsters: null,
-  error: ''
+  error: 'TEST ERROR'
 }
 
 export const reducer = (state = initialState, action) => {
