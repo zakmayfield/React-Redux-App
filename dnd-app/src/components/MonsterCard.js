@@ -35,7 +35,7 @@ const MonsterCard = (props) => {
             <div className="additionalDetails">
               <p className="language"><span className="languageTitle">Languages:</span> {item.languages}</p>
               <div><span className="actionTitle">Actions: </span>{item.actions.map(item => {
-                return <p className="actionName">{item.name}</p>
+                return <p key={item.name} className="actionName">{item.name}</p>
               })}</div>
             </div>
           </div>

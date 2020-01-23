@@ -10,7 +10,7 @@ export const fetchMonsters = () => {
     dispatch({ 
       type: FETCH_MONSTER_START 
     })
-    axios.get('https://api.open5e.com/monsters/?limit=100')
+    axios.get('https://api.open5e.com/monsters/?limit=300')
       .then(res => {
         dispatch({
           type: FETCH_MONSTER_SUCCESS,
