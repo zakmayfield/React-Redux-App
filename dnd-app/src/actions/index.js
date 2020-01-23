@@ -10,16 +10,19 @@ export const fetchMonsters = () => {
     dispatch({ 
       type: FETCH_MONSTER_START 
     })
-    axios.get('https://api.open5e.com/monsters/?limit=10&page=75')
+    axios.get('https://api.open5e.com/monsters/?limit=100')
       .then(res => {
-        console.log(res.data.results)
         dispatch({
           type: FETCH_MONSTER_SUCCESS,
           payload: res.data.results
         })
       })
       .catch(err => {
-        console.log(err)
+        console.log('error message', err)
+        dispatch({
+          type: FETCH_MONSTER_FAILURE,
+          payload: err
+        })
       })
   }
 }

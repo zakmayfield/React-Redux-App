@@ -23,6 +23,12 @@ export const reducer = (state = initialState, action) => {
         isLoading: false,
         monsters: action.payload
       }
+    case FETCH_MONSTER_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload
+      }
     default:
       return state
   }
