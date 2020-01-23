@@ -1,9 +1,11 @@
 import React from 'react';
 
-const MonsterCard = () => {
+const MonsterCard = (props) => {
   return (
     <div>
-      <h2>Monsters Card Comp</h2>
+      {props.monsters.map(item => {
+        return <p key={item.name}>{item.name}</p>
+      })}
     </div>
   )
 }

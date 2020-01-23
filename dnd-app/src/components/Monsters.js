@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from "react-redux";
 
 import MonsterCard from './MonsterCard';
+import { fetchMonsters } from '../actions';
 
 
 const Monsters = (props) => {
   return (
     <div>
-      <h2>Monsters Component</h2>
-      <button>Show Monsters</button>
-      <MonsterCard />
+      <button onClick={props.fetchMonsters}>Show Monsters</button>
+      <MonsterCard monsters={props.monsters} />
     </div>
   )
 }
@@ -20,4 +20,4 @@ const mapStateToProps = state => ({
   error: state.error
 })
 
-export default connect(mapStateToProps, {})(Monsters)
+export default connect(mapStateToProps, { fetchMonsters })(Monsters)
