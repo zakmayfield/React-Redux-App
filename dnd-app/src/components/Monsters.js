@@ -10,37 +10,22 @@ const Monsters = (props) => {
   return (
     <div>
       <button onClick={props.fetchMonsters}>Show Monsters</button>
-      {/* {
-        !props.monsters && !props.isLoading
-          ?
-            <h2>Click to find Monsters!</h2>
+      <div>
+        {!props.isLoading && props.monsters ?
+            ''
           :
             <Loader
               type="Puff"
               color="#00BFFF"
               height={100}
               width={100}
-            />
-      } */}
-      {
-        !props.isLoading && props.monsters ?
-          <h2>Click to find Monsters!</h2>
-        :
-          <Loader
-            type="Puff"
-            color="#00BFFF"
-            height={100}
-            width={100}
-          />
-      }
-      {
-        props.monsters && !props.isLoading
-          ?
-            <MonsterCard monsters={props.monsters} />
-          :
-            ''
-      }
-
+            />}
+        {props.monsters && !props.isLoading
+            ?
+              <MonsterCard monsters={props.monsters} />
+            :
+              ''}
+      </div>
     </div>
   )
 }
