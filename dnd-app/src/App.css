@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+
+
+
+/*MONSTER BOX*/
+
+.monsterBox{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+
+
+/*MONSTER CARDS*/
+
+.card{
+  border: 5px solid black;
+  width: 250px;
+  margin: 5vh 2vw;
+  background: rgba(170, 135, 105, 0.90);
+}
+
+.img{
+  width: 90%;
+  border: 4px solid #606C6C;
+  border-radius: 5px;
+  background: white;
+}
+
+.physicalDetails{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 1vw;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.type{
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.size{
+  margin: 0;
+}
+
+.stats{
+  display: flex;
+  justify-content: space-around;
+  margin: 2vh 0;
+}
+
+.alignment{
+  text-transform: capitalize;
+}
+
+.additionalDetails{
+  text-transform: capitalize;
+  text-align: left;
+  font-size: .85rem;
+
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  padding: .5vh 1vw;
+
+  background: rgb(235, 188, 153);
+}
+
+.languageTitle{
+  font-weight: bold;
+}
+
+.actionTitle{
+  font-weight: bold;
+}
+
+.actionName{
+  margin: 0;
+  margin-left: .5vw;
+}
